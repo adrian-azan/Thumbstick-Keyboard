@@ -1,0 +1,99 @@
+[gd_scene load_steps=5 format=3 uid="uid://djyibn4truv5h"]
+
+[ext_resource type="Script" uid="uid://xbdjqjjvisy3" path="res://SCENES/MainScreen.cs" id="1_raece"]
+[ext_resource type="PackedScene" uid="uid://c6b5w32mohlou" path="res://SCENES/Selector.tscn" id="1_vjitr"]
+[ext_resource type="Texture2D" uid="uid://bmooch8b2mvhn" path="res://ASSETS/SELF/Circle_Keyboard.png" id="3_enrwu"]
+[ext_resource type="PackedScene" uid="uid://bn2vbvfuekim1" path="res://SCENES/Character.tscn" id="4_bp6j1"]
+
+[node name="MainScreen" type="Node2D"]
+script = ExtResource("1_raece")
+
+[node name="LeftKeys" type="Sprite2D" parent="."]
+scale = Vector2(7, 7)
+texture = ExtResource("3_enrwu")
+
+[node name="Selector" parent="LeftKeys" instance=ExtResource("1_vjitr")]
+scale = Vector2(0.014285713, 0.014285713)
+
+[node name="Character" parent="LeftKeys" instance=ExtResource("4_bp6j1")]
+position = Vector2(-1.9999999, -3.5714283)
+scale = Vector2(0.08, 0.08)
+_character = "A"
+
+[node name="Character2" parent="LeftKeys" instance=ExtResource("4_bp6j1")]
+position = Vector2(3.4285717, -28.42857)
+scale = Vector2(0.08, 0.08)
+_character = "B"
+
+[node name="Character4" parent="LeftKeys" instance=ExtResource("4_bp6j1")]
+position = Vector2(14.999999, -22.142857)
+scale = Vector2(0.08, 0.08)
+_character = "C"
+
+[node name="Character5" parent="LeftKeys" instance=ExtResource("4_bp6j1")]
+position = Vector2(21, -10.142858)
+scale = Vector2(0.08, 0.08)
+_character = "D"
+
+[node name="Character6" parent="LeftKeys" instance=ExtResource("4_bp6j1")]
+position = Vector2(20.428572, 2.4285717)
+scale = Vector2(0.08, 0.08)
+_character = "E"
+
+[node name="Character7" parent="LeftKeys" instance=ExtResource("4_bp6j1")]
+position = Vector2(14.571429, 13.571427)
+scale = Vector2(0.08, 0.08)
+_character = "F"
+
+[node name="Character8" parent="LeftKeys" instance=ExtResource("4_bp6j1")]
+position = Vector2(3.8571434, 19.42857)
+scale = Vector2(0.08, 0.08)
+_character = "G"
+
+[node name="Character9" parent="LeftKeys" instance=ExtResource("4_bp6j1")]
+position = Vector2(-8.571427, 19.285715)
+scale = Vector2(0.08, 0.08)
+_character = "H"
+
+[node name="Character10" parent="LeftKeys" instance=ExtResource("4_bp6j1")]
+position = Vector2(-20.285713, 13.714286)
+scale = Vector2(0.08, 0.08)
+_character = "I"
+
+[node name="Character11" parent="LeftKeys" instance=ExtResource("4_bp6j1")]
+position = Vector2(-25, 2.000001)
+scale = Vector2(0.08, 0.08)
+_character = "J"
+
+[node name="Character12" parent="LeftKeys" instance=ExtResource("4_bp6j1")]
+position = Vector2(-26.142857, -9.999999)
+scale = Vector2(0.08, 0.08)
+_character = "K"
+
+[node name="Character13" parent="LeftKeys" instance=ExtResource("4_bp6j1")]
+position = Vector2(-20.999996, -21.428572)
+scale = Vector2(0.08, 0.08)
+_character = "L"
+
+[node name="Character14" parent="LeftKeys" instance=ExtResource("4_bp6j1")]
+position = Vector2(-8.999999, -27.285717)
+scale = Vector2(0.08, 0.08)
+_character = "M"
+
+[node name="DEBUG_Horizontal" type="Label" parent="."]
+visible = false
+offset_right = 40.0
+offset_bottom = 23.0
+text = "H:"
+
+[node name="DEBUG_Vertical" type="Label" parent="."]
+visible = false
+offset_right = 40.0
+offset_bottom = 23.0
+text = "V:"
+
+[node name="Output" type="Label" parent="."]
+offset_right = 40.0
+offset_bottom = 23.0
+theme_override_font_sizes/font_size = 32
+text = "Output:"

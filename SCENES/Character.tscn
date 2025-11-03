@@ -1,0 +1,25 @@
+[gd_scene load_steps=4 format=3 uid="uid://bn2vbvfuekim1"]
+
+[ext_resource type="Script" uid="uid://caifvua4yvkfo" path="res://SCENES/Character.cs" id="1_3tp35"]
+[ext_resource type="FontFile" uid="uid://s4xouvtitx7t" path="res://ASSETS/pikmin_by_theadorableoshawott-da33cfr.ttf" id="1_3u6ld"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_3tp35"]
+
+[node name="Character" type="Node2D"]
+script = ExtResource("1_3tp35")
+
+[node name="Area2D" type="Area2D" parent="."]
+position = Vector2(35, 51)
+scale = Vector2(4.535, 4.535)
+collision_mask = 0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+scale = Vector2(1.0000001, 1.0000001)
+shape = SubResource("CircleShape2D_3tp35")
+
+[node name="RichTextLabel" type="RichTextLabel" parent="."]
+offset_right = 100.0
+offset_bottom = 100.0
+theme_override_fonts/normal_font = ExtResource("1_3u6ld")
+theme_override_font_sizes/normal_font_size = 80
+text = "A"

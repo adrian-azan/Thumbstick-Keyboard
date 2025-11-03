@@ -1,0 +1,19 @@
+﻿Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2012
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Thumbstick Keyboard", "Thumbstick Keyboard.csproj", "{AFE7B80E-264E-485F-994C-B80C68D8B9A4}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+	Debug|Any CPU = Debug|Any CPU
+	ExportDebug|Any CPU = ExportDebug|Any CPU
+	ExportRelease|Any CPU = ExportRelease|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{AFE7B80E-264E-485F-994C-B80C68D8B9A4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AFE7B80E-264E-485F-994C-B80C68D8B9A4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AFE7B80E-264E-485F-994C-B80C68D8B9A4}.ExportDebug|Any CPU.ActiveCfg = ExportDebug|Any CPU
+		{AFE7B80E-264E-485F-994C-B80C68D8B9A4}.ExportDebug|Any CPU.Build.0 = ExportDebug|Any CPU
+		{AFE7B80E-264E-485F-994C-B80C68D8B9A4}.ExportRelease|Any CPU.ActiveCfg = ExportRelease|Any CPU
+		{AFE7B80E-264E-485F-994C-B80C68D8B9A4}.ExportRelease|Any CPU.Build.0 = ExportRelease|Any CPU
+	EndGlobalSection
+EndGlobal
