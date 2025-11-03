@@ -2,7 +2,8 @@ using Godot;
 
 public partial class MainScreen : Node2D
 {
-	private Node2D _selector;
+	private Node2D _leftSelector;
+	private Node2D _rightSelector;
 	private Label _output;
 	private int _initialOutputSize;
 	
@@ -13,7 +14,8 @@ public partial class MainScreen : Node2D
 
 	public override void _Ready()
 	{
-		_selector = GetNode<Node2D>("LeftKeys/Selector");
+		_leftSelector = GetNode<Node2D>("LeftKeys/Selector");
+		_rightSelector = GetNode<Node2D>("RightKeys/Selector");
 		_output = GetNode<Label>("Output");
 		_screenSize = GetViewport().GetVisibleRect().Size;
 		
@@ -21,6 +23,7 @@ public partial class MainScreen : Node2D
 		_initialOutputSize = _output.Text.Length;
 		
 		GetNode<Sprite2D>("LeftKeys").GlobalPosition =  new Vector2(_screenSize.X * .25f, _screenSize.Y * .4f);
+		GetNode<Sprite2D>("RightKeys").GlobalPosition =  new Vector2(_screenSize.X * .75f, _screenSize.Y * .4f);
 
 		CustomSignals._Instance.AddLetterToResult += UpdateText;
 		CustomSignals._Instance.RemoveLetterFromResult += RemoveText;
@@ -40,19 +43,32 @@ public partial class MainScreen : Node2D
 		float selectorRadius = 25;
 		float leftStickMovement_Horizontal = Input.GetAxis("Left_Left", "Left_Right");
 		float leftStickMovement_Vertical = Input.GetAxis("Left_Up", "Left_Down");
+		float rightStickMovement_Horizontal = Input.GetAxis("Right_Left", "Right_Right");
+		float rightStickMovement_Vertical = Input.GetAxis("Right_Up", "Right_Down");
 
-		_selector.Position = Vector2.Zero;
-		var sp = _selector.Position;
+		_leftSelector.Position = Vector2.Zero;
+		var sp = _leftSelector.Position;
 		sp.X += leftStickMovement_Horizontal * selectorRadius;
 		sp.Y += leftStickMovement_Vertical * selectorRadius;
-		_selector.Position = sp;
+		_leftSelector.Position = sp;
 
+		_rightSelector.Position = Vector2.Zero;
+		sp = _rightSelector.Position;
+		sp.X += rightStickMovement_Horizontal * selectorRadius;
+		sp.Y += rightStickMovement_Vertical * selectorRadius;
+		_rightSelector.Position = sp;
 
 		
 		DEBUG_HorizontalMovement.Text = (leftStickMovement_Horizontal*selectorRadius).ToString();
 		DEBUG_VerticalMovement.Text = (leftStickMovement_Vertical*selectorRadius).ToString();
 	}
 	
+	public override void _Input(InputEvent @event)
+	{
+		if (@event.IsActionPressed("Back"))
+			RemoveText();
+	}
+
 	public void UpdateText(string letter)
 	{
 		_output.Text += letter;

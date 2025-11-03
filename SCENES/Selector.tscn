@@ -14,10 +14,11 @@ script = ExtResource("1_sir7q")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 material = SubResource("ShaderMaterial_sir7q")
+scale = Vector2(0.655, 0.655)
 texture = ExtResource("1_gmv5l")
 
 [node name="Area2D" type="Area2D" parent="."]
-scale = Vector2(28.315, 28.315)
+scale = Vector2(11.26, 11.26)
 collision_layer = 0
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
