@@ -1,171 +1,43 @@
-[gd_scene load_steps=6 format=3 uid="uid://djyibn4truv5h"]
+[gd_scene load_steps=5 format=3 uid="uid://djyibn4truv5h"]
 
 [ext_resource type="Script" uid="uid://xbdjqjjvisy3" path="res://SCENES/MainScreen.cs" id="1_raece"]
 [ext_resource type="PackedScene" uid="uid://c6b5w32mohlou" path="res://SCENES/Selector.tscn" id="1_vjitr"]
-[ext_resource type="Texture2D" uid="uid://bmooch8b2mvhn" path="res://ASSETS/SELF/Circle_Keyboard.png" id="3_enrwu"]
-[ext_resource type="PackedScene" uid="uid://bn2vbvfuekim1" path="res://SCENES/Character.tscn" id="4_bp6j1"]
+[ext_resource type="PackedScene" uid="uid://rbhbhg02ke26" path="res://SCENES/CharacterSet.tscn" id="2_fd2mp"]
 [ext_resource type="Texture2D" uid="uid://c8wurhwq7x61x" path="res://ASSETS/godot-prototype-texture/PNG/logo_512x512/logo_orange_512x512.png" id="5_x0ove"]
 
 [node name="MainScreen" type="Node2D"]
 script = ExtResource("1_raece")
 
-[node name="LeftKeys" type="Sprite2D" parent="."]
-scale = Vector2(7, 7)
-texture = ExtResource("3_enrwu")
+[node name="LeftKeys" parent="." instance=ExtResource("2_fd2mp")]
+scale = Vector2(0.09, 0.09)
+_selectableCharacters = "ABCDEFGHIJKLM"
 
-[node name="Selector" parent="LeftKeys" instance=ExtResource("1_vjitr")]
-scale = Vector2(0.014285713, 0.014285713)
+[node name="LeftSelector" parent="LeftKeys" instance=ExtResource("1_vjitr")]
 EnterActionName = "Left_Enter"
 
-[node name="Character" parent="LeftKeys" instance=ExtResource("4_bp6j1")]
-position = Vector2(-1.9999999, -3.5714283)
-scale = Vector2(0.08, 0.08)
-_character = "A"
+[node name="RightKeys" parent="." instance=ExtResource("2_fd2mp")]
+scale = Vector2(0.09, 0.09)
+_selectableCharacters = "NOPQRSTUVWXYZ"
 
-[node name="Character2" parent="LeftKeys" instance=ExtResource("4_bp6j1")]
-position = Vector2(3.4285717, -28.42857)
-scale = Vector2(0.08, 0.08)
-_character = "B"
-
-[node name="Character4" parent="LeftKeys" instance=ExtResource("4_bp6j1")]
-position = Vector2(14.999999, -22.142857)
-scale = Vector2(0.08, 0.08)
-_character = "C"
-
-[node name="Character5" parent="LeftKeys" instance=ExtResource("4_bp6j1")]
-position = Vector2(21, -10.142858)
-scale = Vector2(0.08, 0.08)
-_character = "D"
-
-[node name="Character6" parent="LeftKeys" instance=ExtResource("4_bp6j1")]
-position = Vector2(20.428572, 2.4285717)
-scale = Vector2(0.08, 0.08)
-_character = "E"
-
-[node name="Character7" parent="LeftKeys" instance=ExtResource("4_bp6j1")]
-position = Vector2(14.571429, 13.571427)
-scale = Vector2(0.08, 0.08)
-_character = "F"
-
-[node name="Character8" parent="LeftKeys" instance=ExtResource("4_bp6j1")]
-position = Vector2(3.8571434, 19.42857)
-scale = Vector2(0.08, 0.08)
-_character = "G"
-
-[node name="Character9" parent="LeftKeys" instance=ExtResource("4_bp6j1")]
-position = Vector2(-8.571427, 19.285715)
-scale = Vector2(0.08, 0.08)
-_character = "H"
-
-[node name="Character10" parent="LeftKeys" instance=ExtResource("4_bp6j1")]
-position = Vector2(-20.285713, 13.714286)
-scale = Vector2(0.08, 0.08)
-_character = "I"
-
-[node name="Character11" parent="LeftKeys" instance=ExtResource("4_bp6j1")]
-position = Vector2(-25, 2.000001)
-scale = Vector2(0.08, 0.08)
-_character = "J"
-
-[node name="Character12" parent="LeftKeys" instance=ExtResource("4_bp6j1")]
-position = Vector2(-26.142857, -9.999999)
-scale = Vector2(0.08, 0.08)
-_character = "K"
-
-[node name="Character13" parent="LeftKeys" instance=ExtResource("4_bp6j1")]
-position = Vector2(-20.999996, -21.428572)
-scale = Vector2(0.08, 0.08)
-_character = "L"
-
-[node name="Character14" parent="LeftKeys" instance=ExtResource("4_bp6j1")]
-position = Vector2(-8.999999, -27.285717)
-scale = Vector2(0.08, 0.08)
-_character = "M"
-
-[node name="RightKeys" type="Sprite2D" parent="."]
-scale = Vector2(7, 7)
-texture = ExtResource("3_enrwu")
-
-[node name="Selector" parent="RightKeys" instance=ExtResource("1_vjitr")]
-scale = Vector2(0.014285713, 0.014285713)
+[node name="RightSelector" parent="RightKeys" instance=ExtResource("1_vjitr")]
 EnterActionName = "Right_Enter"
 
-[node name="Sprite2D" parent="RightKeys/Selector" index="0"]
+[node name="Sprite2D" parent="RightKeys/RightSelector" index="0"]
 texture = ExtResource("5_x0ove")
 
-[node name="Character" parent="RightKeys" instance=ExtResource("4_bp6j1")]
-position = Vector2(-1.9999999, -3.5714283)
-scale = Vector2(0.08, 0.08)
-_character = "N"
+[node name="RightAlternateKeys" parent="." instance=ExtResource("2_fd2mp")]
+scale = Vector2(0.09, 0.09)
+_selectableCharacters = "@!#$%^&*)(_."
 
-[node name="Character2" parent="RightKeys" instance=ExtResource("4_bp6j1")]
-position = Vector2(3.4285717, -28.42857)
-scale = Vector2(0.08, 0.08)
-_character = "O"
-
-[node name="Character4" parent="RightKeys" instance=ExtResource("4_bp6j1")]
-position = Vector2(14.999999, -22.142857)
-scale = Vector2(0.08, 0.08)
-_character = "P"
-
-[node name="Character5" parent="RightKeys" instance=ExtResource("4_bp6j1")]
-position = Vector2(21, -10.142858)
-scale = Vector2(0.08, 0.08)
-_character = "Q"
-
-[node name="Character6" parent="RightKeys" instance=ExtResource("4_bp6j1")]
-position = Vector2(20.428572, 2.4285717)
-scale = Vector2(0.08, 0.08)
-_character = "R"
-
-[node name="Character7" parent="RightKeys" instance=ExtResource("4_bp6j1")]
-position = Vector2(14.571429, 13.571427)
-scale = Vector2(0.08, 0.08)
-_character = "S"
-
-[node name="Character8" parent="RightKeys" instance=ExtResource("4_bp6j1")]
-position = Vector2(3.8571434, 19.42857)
-scale = Vector2(0.08, 0.08)
-_character = "T"
-
-[node name="Character9" parent="RightKeys" instance=ExtResource("4_bp6j1")]
-position = Vector2(-8.571427, 19.285715)
-scale = Vector2(0.08, 0.08)
-_character = "U"
-
-[node name="Character10" parent="RightKeys" instance=ExtResource("4_bp6j1")]
-position = Vector2(-20.285713, 13.714286)
-scale = Vector2(0.08, 0.08)
-_character = "V"
-
-[node name="Character11" parent="RightKeys" instance=ExtResource("4_bp6j1")]
-position = Vector2(-25, 2.000001)
-scale = Vector2(0.08, 0.08)
-_character = "W"
-
-[node name="Character12" parent="RightKeys" instance=ExtResource("4_bp6j1")]
-position = Vector2(-26.142857, -9.999999)
-scale = Vector2(0.08, 0.08)
-_character = "X"
-
-[node name="Character13" parent="RightKeys" instance=ExtResource("4_bp6j1")]
-position = Vector2(-20.999996, -21.428572)
-scale = Vector2(0.08, 0.08)
-_character = "Y"
-
-[node name="Character14" parent="RightKeys" instance=ExtResource("4_bp6j1")]
-position = Vector2(-8.999999, -27.285717)
-scale = Vector2(0.08, 0.08)
-_character = "Z"
+[node name="Wheel" parent="RightAlternateKeys" index="0"]
+visible = false
 
 [node name="DEBUG_Horizontal" type="Label" parent="."]
-visible = false
 offset_right = 40.0
 offset_bottom = 23.0
 text = "H:"
 
 [node name="DEBUG_Vertical" type="Label" parent="."]
-visible = false
 offset_right = 40.0
 offset_bottom = 23.0
 text = "V:"
@@ -176,4 +48,5 @@ offset_bottom = 23.0
 theme_override_font_sizes/font_size = 32
 text = "Output:"
 
-[editable path="RightKeys/Selector"]
+[editable path="RightKeys/RightSelector"]
+[editable path="RightAlternateKeys"]

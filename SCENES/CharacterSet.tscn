@@ -1,0 +1,67 @@
+[gd_scene load_steps=4 format=3 uid="uid://rbhbhg02ke26"]
+
+[ext_resource type="Script" uid="uid://6ijdha51umwy" path="res://SCENES/CharacterSet.cs" id="1_yjgi3"]
+[ext_resource type="Texture2D" uid="uid://rtpvewpdn07v" path="res://ASSETS/SELF/Circle_Keyboard_HighDef.png" id="2_wvlfc"]
+[ext_resource type="PackedScene" uid="uid://bn2vbvfuekim1" path="res://SCENES/Character.tscn" id="2_yjgi3"]
+
+[node name="CharacterSet" type="Node2D"]
+script = ExtResource("1_yjgi3")
+Characters = "@!#$%^&*)(_+"
+
+[node name="Wheel" type="Sprite2D" parent="."]
+scale = Vector2(7, 7)
+texture = ExtResource("2_wvlfc")
+
+[node name="Characters" type="Node2D" parent="Wheel"]
+
+[node name="Character" parent="Wheel/Characters" instance=ExtResource("2_yjgi3")]
+position = Vector2(-35.142857, -58.85714)
+_character = "A"
+
+[node name="Character2" parent="Wheel/Characters" instance=ExtResource("2_yjgi3")]
+position = Vector2(28.285713, -298.42856)
+_character = "B"
+
+[node name="Character4" parent="Wheel/Characters" instance=ExtResource("2_yjgi3")]
+position = Vector2(162.5, -226.7857)
+_character = "C"
+
+[node name="Character5" parent="Wheel/Characters" instance=ExtResource("2_yjgi3")]
+position = Vector2(233.71428, -105.85714)
+_character = "D"
+
+[node name="Character6" parent="Wheel/Characters" instance=ExtResource("2_yjgi3")]
+position = Vector2(216, 0.1428585)
+_character = "E"
+
+[node name="Character7" parent="Wheel/Characters" instance=ExtResource("2_yjgi3")]
+position = Vector2(164.2857, 137.5)
+_character = "F"
+
+[node name="Character8" parent="Wheel/Characters" instance=ExtResource("2_yjgi3")]
+position = Vector2(31.285713, 202.57143)
+_character = "G"
+
+[node name="Character9" parent="Wheel/Characters" instance=ExtResource("2_yjgi3")]
+position = Vector2(-96, 200.57143)
+_character = "H"
+
+[node name="Character10" parent="Wheel/Characters" instance=ExtResource("2_yjgi3")]
+position = Vector2(-230.85715, 111.85714)
+_character = "I"
+
+[node name="Character11" parent="Wheel/Characters" instance=ExtResource("2_yjgi3")]
+position = Vector2(-290.2857, 0.2857151)
+_character = "J"
+
+[node name="Character12" parent="Wheel/Characters" instance=ExtResource("2_yjgi3")]
+position = Vector2(-272.5714, -125.85714)
+_character = "K"
+
+[node name="Character13" parent="Wheel/Characters" instance=ExtResource("2_yjgi3")]
+position = Vector2(-207.42857, -241.85715)
+_character = "L"
+
+[node name="Character14" parent="Wheel/Characters" instance=ExtResource("2_yjgi3")]
+position = Vector2(-93.28571, -310.7143)
+_character = "M"

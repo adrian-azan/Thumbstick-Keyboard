@@ -1,3 +1,4 @@
+using System.Runtime.InteropServices.JavaScript;
 using Godot;
 
 public partial class MainScreen : Node2D
@@ -14,16 +15,18 @@ public partial class MainScreen : Node2D
 
 	public override void _Ready()
 	{
-		_leftSelector = GetNode<Node2D>("LeftKeys/Selector");
-		_rightSelector = GetNode<Node2D>("RightKeys/Selector");
+		_leftSelector = GetNode<Node2D>("LeftKeys/LeftSelector");
+		_rightSelector = GetNode<Node2D>("RightKeys/RightSelector");
+		
 		_output = GetNode<Label>("Output");
 		_screenSize = GetViewport().GetVisibleRect().Size;
 		
 		_output.GlobalPosition = new Vector2(_screenSize.X * .1f, _screenSize.Y * .8f);
 		_initialOutputSize = _output.Text.Length;
 		
-		GetNode<Sprite2D>("LeftKeys").GlobalPosition =  new Vector2(_screenSize.X * .25f, _screenSize.Y * .4f);
-		GetNode<Sprite2D>("RightKeys").GlobalPosition =  new Vector2(_screenSize.X * .75f, _screenSize.Y * .4f);
+		GetNode<Node2D>("LeftKeys").Position =  new Vector2(_screenSize.X * .25f, _screenSize.Y * .4f);
+		GetNode<Node2D>("RightKeys").Position =  new Vector2(_screenSize.X * .75f, _screenSize.Y * .4f);
+		GetNode<Node2D>("RightAlternateKeys").GlobalPosition =  new Vector2(_screenSize.X * .75f, _screenSize.Y * .4f);
 
 		CustomSignals._Instance.AddLetterToResult += UpdateText;
 		CustomSignals._Instance.RemoveLetterFromResult += RemoveText;
@@ -33,14 +36,13 @@ public partial class MainScreen : Node2D
 		DEBUG_HorizontalMovement = GetNode<Label>("DEBUG_Horizontal");
 		DEBUG_VerticalMovement = GetNode<Label>("DEBUG_Vertical");
 
-		DEBUG_HorizontalMovement.GlobalPosition = new Vector2(_screenSize.X * .25f, _screenSize.Y * .75f);
-		DEBUG_VerticalMovement.GlobalPosition = new Vector2(_screenSize.X * .25f,( _screenSize.Y * .75f) + (_screenSize.Y * .05f));
+		DEBUG_HorizontalMovement.GlobalPosition = new Vector2(_screenSize.X * .05f, _screenSize.Y * .7f);
+		DEBUG_VerticalMovement.GlobalPosition = new Vector2(_screenSize.X * .05f,( _screenSize.Y * .7f) + (_screenSize.Y * .05f));
 	}
 
-	// Called every frame. 'delta' is the elapsed time since the previous frame.
 	public override void _Process(double delta)
 	{
-		float selectorRadius = 25;
+		float selectorRadius = 1800;
 		float leftStickMovement_Horizontal = Input.GetAxis("Left_Left", "Left_Right");
 		float leftStickMovement_Vertical = Input.GetAxis("Left_Up", "Left_Down");
 		float rightStickMovement_Horizontal = Input.GetAxis("Right_Left", "Right_Right");
@@ -67,10 +69,24 @@ public partial class MainScreen : Node2D
 	{
 		if (@event.IsActionPressed("Back"))
 			RemoveText();
+		
+		if (@event.IsActionPressed("Right_Alternate"))
+		{
+			GetNode<Node2D>("RightAlternateKeys/Wheel").Visible = true;
+			GetNode<Sprite2D>("RightKeys/Wheel").Visible = false;
+		}
+		else if (@event.IsActionReleased("Right_Alternate"))
+		{
+			GetNode<Node2D>("RightAlternateKeys/Wheel").Visible = false;
+			GetNode<Sprite2D>("RightKeys/Wheel").Visible = true;
+		}
 	}
 
 	public void UpdateText(string letter)
 	{
+		if (string.IsNullOrEmpty(letter))
+			return;
+		
 		_output.Text += letter;
 	}
 
