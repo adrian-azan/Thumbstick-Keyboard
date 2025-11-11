@@ -1,14 +1,16 @@
-[gd_scene load_steps=5 format=3 uid="uid://djyibn4truv5h"]
+[gd_scene load_steps=6 format=3 uid="uid://djyibn4truv5h"]
 
 [ext_resource type="Script" uid="uid://xbdjqjjvisy3" path="res://SCENES/MainScreen.cs" id="1_raece"]
 [ext_resource type="PackedScene" uid="uid://c6b5w32mohlou" path="res://SCENES/Selector.tscn" id="1_vjitr"]
 [ext_resource type="PackedScene" uid="uid://rbhbhg02ke26" path="res://SCENES/CharacterSet.tscn" id="2_fd2mp"]
+[ext_resource type="PackedScene" uid="uid://bf85xay80u3yx" path="res://SCENES/ControllerGuide.tscn" id="5_fd2mp"]
 [ext_resource type="Texture2D" uid="uid://c8wurhwq7x61x" path="res://ASSETS/godot-prototype-texture/PNG/logo_512x512/logo_orange_512x512.png" id="5_x0ove"]
 
 [node name="MainScreen" type="Node2D"]
 script = ExtResource("1_raece")
 
 [node name="LeftKeys" parent="." instance=ExtResource("2_fd2mp")]
+position = Vector2(300, 280)
 scale = Vector2(0.09, 0.09)
 _selectableCharacters = "ABCDEFGHIJKLM"
 
@@ -16,6 +18,7 @@ _selectableCharacters = "ABCDEFGHIJKLM"
 EnterActionName = "Left_Enter"
 
 [node name="RightKeys" parent="." instance=ExtResource("2_fd2mp")]
+position = Vector2(800, 280)
 scale = Vector2(0.09, 0.09)
 _selectableCharacters = "NOPQRSTUVWXYZ"
 
@@ -26,27 +29,48 @@ EnterActionName = "Right_Enter"
 texture = ExtResource("5_x0ove")
 
 [node name="RightAlternateKeys" parent="." instance=ExtResource("2_fd2mp")]
+position = Vector2(800, 280)
 scale = Vector2(0.09, 0.09)
 _selectableCharacters = "@!#$%^&*)(_."
 
 [node name="Wheel" parent="RightAlternateKeys" index="0"]
 visible = false
 
+[node name="ControllerGuide" parent="." instance=ExtResource("5_fd2mp")]
+position = Vector2(653, 375.99994)
+scale = Vector2(1.705, 1.705)
+
+[node name="Output" type="Label" parent="."]
+offset_left = 19.0
+offset_top = 507.0
+offset_right = 139.0
+offset_bottom = 552.0
+theme_override_font_sizes/font_size = 32
+
 [node name="DEBUG_Horizontal" type="Label" parent="."]
+visible = false
 offset_right = 40.0
 offset_bottom = 23.0
 text = "H:"
 
 [node name="DEBUG_Vertical" type="Label" parent="."]
+visible = false
 offset_right = 40.0
 offset_bottom = 23.0
 text = "V:"
 
-[node name="Output" type="Label" parent="."]
-offset_right = 40.0
-offset_bottom = 23.0
-theme_override_font_sizes/font_size = 32
-text = "Output:"
-
 [editable path="RightKeys/RightSelector"]
 [editable path="RightAlternateKeys"]
+[editable path="RightAlternateKeys/Wheel/Characters/Character"]
+[editable path="RightAlternateKeys/Wheel/Characters/Character2"]
+[editable path="RightAlternateKeys/Wheel/Characters/Character4"]
+[editable path="RightAlternateKeys/Wheel/Characters/Character5"]
+[editable path="RightAlternateKeys/Wheel/Characters/Character6"]
+[editable path="RightAlternateKeys/Wheel/Characters/Character7"]
+[editable path="RightAlternateKeys/Wheel/Characters/Character8"]
+[editable path="RightAlternateKeys/Wheel/Characters/Character9"]
+[editable path="RightAlternateKeys/Wheel/Characters/Character10"]
+[editable path="RightAlternateKeys/Wheel/Characters/Character11"]
+[editable path="RightAlternateKeys/Wheel/Characters/Character12"]
+[editable path="RightAlternateKeys/Wheel/Characters/Character13"]
+[editable path="RightAlternateKeys/Wheel/Characters/Character14"]

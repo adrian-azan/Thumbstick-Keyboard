@@ -24,9 +24,9 @@ public partial class MainScreen : Node2D
 		_output.GlobalPosition = new Vector2(_screenSize.X * .1f, _screenSize.Y * .8f);
 		_initialOutputSize = _output.Text.Length;
 		
-		GetNode<Node2D>("LeftKeys").Position =  new Vector2(_screenSize.X * .25f, _screenSize.Y * .4f);
-		GetNode<Node2D>("RightKeys").Position =  new Vector2(_screenSize.X * .75f, _screenSize.Y * .4f);
-		GetNode<Node2D>("RightAlternateKeys").GlobalPosition =  new Vector2(_screenSize.X * .75f, _screenSize.Y * .4f);
+	//	GetNode<Node2D>("LeftKeys").Position =  new Vector2(_screenSize.X * .25f, _screenSize.Y * .4f);
+	//	GetNode<Node2D>("RightKeys").Position =  new Vector2(_screenSize.X * .75f, _screenSize.Y * .4f);
+	//	GetNode<Node2D>("RightAlternateKeys").GlobalPosition =  new Vector2(_screenSize.X * .75f, _screenSize.Y * .4f);
 
 		CustomSignals._Instance.AddLetterToResult += UpdateText;
 		CustomSignals._Instance.RemoveLetterFromResult += RemoveText;
@@ -42,7 +42,7 @@ public partial class MainScreen : Node2D
 
 	public override void _Process(double delta)
 	{
-		float selectorRadius = 1800;
+		float selectorRadius = 1600;
 		float leftStickMovement_Horizontal = Input.GetAxis("Left_Left", "Left_Right");
 		float leftStickMovement_Vertical = Input.GetAxis("Left_Up", "Left_Down");
 		float rightStickMovement_Horizontal = Input.GetAxis("Right_Left", "Right_Right");
@@ -61,7 +61,7 @@ public partial class MainScreen : Node2D
 		_rightSelector.Position = sp;
 
 		
-		DEBUG_HorizontalMovement.Text = (leftStickMovement_Horizontal*selectorRadius).ToString();
+		DEBUG_HorizontalMovement.Text = leftStickMovement_Horizontal.ToString();
 		DEBUG_VerticalMovement.Text = (leftStickMovement_Vertical*selectorRadius).ToString();
 	}
 	
@@ -69,6 +69,8 @@ public partial class MainScreen : Node2D
 	{
 		if (@event.IsActionPressed("Back"))
 			RemoveText();
+		if (@event.IsActionPressed("Clear"))
+			ClearText();
 		
 		if (@event.IsActionPressed("Right_Alternate"))
 		{
@@ -96,5 +98,10 @@ public partial class MainScreen : Node2D
 			return;
 		
 		_output.Text = _output.Text.Remove(_output.Text.Length-1);
+	}
+	
+	public void ClearText()
+	{
+		_output.Text = _output.Text.Substring(0,_initialOutputSize);
 	}
 }

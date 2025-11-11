@@ -1,12 +1,50 @@
-[gd_scene load_steps=4 format=3 uid="uid://rbhbhg02ke26"]
+[gd_scene load_steps=17 format=3 uid="uid://rbhbhg02ke26"]
 
 [ext_resource type="Script" uid="uid://6ijdha51umwy" path="res://SCENES/CharacterSet.cs" id="1_yjgi3"]
 [ext_resource type="Texture2D" uid="uid://rtpvewpdn07v" path="res://ASSETS/SELF/Circle_Keyboard_HighDef.png" id="2_wvlfc"]
 [ext_resource type="PackedScene" uid="uid://bn2vbvfuekim1" path="res://SCENES/Character.tscn" id="2_yjgi3"]
 
+[sub_resource type="ConvexPolygonShape2D" id="ConvexPolygonShape2D_bpggk"]
+points = PackedVector2Array(8.649552, -1.5410728, 27.455355, 22.510265, -10.491071, 41.98571, -22.544641, 18.715622)
+
+[sub_resource type="ConvexPolygonShape2D" id="ConvexPolygonShape2D_yjgi3"]
+points = PackedVector2Array(-14.508927, -0.25759125, 31.640623, 10.177681, -16.462051, 89.08392)
+
+[sub_resource type="ConvexPolygonShape2D" id="ConvexPolygonShape2D_wvlfc"]
+points = PackedVector2Array(-10.016739, -10.106918, 31.835938, 37.660934, -53.487717, 65.56271)
+
+[sub_resource type="ConvexPolygonShape2D" id="ConvexPolygonShape2D_32dim"]
+points = PackedVector2Array(8.70536, 1.583931, 16.462051, 34.452232, -74.441956, 31.662052)
+
+[sub_resource type="ConvexPolygonShape2D" id="ConvexPolygonShape2D_v21xv"]
+points = PackedVector2Array(23.046875, 4.2066965, 16.517853, 47.677673, -68.136154, 5.769196)
+
+[sub_resource type="ConvexPolygonShape2D" id="ConvexPolygonShape2D_jrby7"]
+points = PackedVector2Array(27.12053, 2.3930817, -16.294643, 49.212273, -53.850445, -30.810041)
+
+[sub_resource type="ConvexPolygonShape2D" id="ConvexPolygonShape2D_7ao3m"]
+points = PackedVector2Array(-20.200891, 43.65982, 26.004461, 32.499107, -14.006695, -50.31339)
+
+[sub_resource type="ConvexPolygonShape2D" id="ConvexPolygonShape2D_b20q0"]
+points = PackedVector2Array(-28.124998, 32.778122, 20.145088, 44.887497, 17.578123, -50.704014)
+
+[sub_resource type="ConvexPolygonShape2D" id="ConvexPolygonShape2D_fj1tt"]
+points = PackedVector2Array(-32.03125, 11.684376, 12.276787, 60.5125, 58.426334, -23.583477)
+
+[sub_resource type="ConvexPolygonShape2D" id="ConvexPolygonShape2D_3c7qe"]
+points = PackedVector2Array(-20.08928, 4.206696, -13.337051, 44.77589, 75.279015, 4.987946)
+
+[sub_resource type="ConvexPolygonShape2D" id="ConvexPolygonShape2D_4atxx"]
+points = PackedVector2Array(-11.607155, -10.692852, -26.618309, 41.874107, 66.85266, 41.483482)
+
+[sub_resource type="ConvexPolygonShape2D" id="ConvexPolygonShape2D_qe8xw"]
+points = PackedVector2Array(-31.473213, 24.854012, 46.261154, 71.78481, 11.328121, -12.311157)
+
+[sub_resource type="ConvexPolygonShape2D" id="ConvexPolygonShape2D_mx5ii"]
+points = PackedVector2Array(-26.841516, 10.456696, 16.294641, 92.32053, 19.308033, 1.0817032)
+
 [node name="CharacterSet" type="Node2D"]
 script = ExtResource("1_yjgi3")
-Characters = "@!#$%^&*)(_+"
 
 [node name="Wheel" type="Sprite2D" parent="."]
 scale = Vector2(7, 7)
@@ -18,50 +56,103 @@ texture = ExtResource("2_wvlfc")
 position = Vector2(-35.142857, -58.85714)
 _character = "A"
 
+[node name="CollisionShape2D" parent="Wheel/Characters/Character/Area2D" index="0"]
+shape = SubResource("ConvexPolygonShape2D_bpggk")
+
 [node name="Character2" parent="Wheel/Characters" instance=ExtResource("2_yjgi3")]
 position = Vector2(28.285713, -298.42856)
 _character = "B"
+
+[node name="CollisionShape2D" parent="Wheel/Characters/Character2/Area2D" index="0"]
+shape = SubResource("ConvexPolygonShape2D_yjgi3")
 
 [node name="Character4" parent="Wheel/Characters" instance=ExtResource("2_yjgi3")]
 position = Vector2(162.5, -226.7857)
 _character = "C"
 
+[node name="CollisionShape2D" parent="Wheel/Characters/Character4/Area2D" index="0"]
+shape = SubResource("ConvexPolygonShape2D_wvlfc")
+
 [node name="Character5" parent="Wheel/Characters" instance=ExtResource("2_yjgi3")]
 position = Vector2(233.71428, -105.85714)
 _character = "D"
+
+[node name="CollisionShape2D" parent="Wheel/Characters/Character5/Area2D" index="0"]
+shape = SubResource("ConvexPolygonShape2D_32dim")
 
 [node name="Character6" parent="Wheel/Characters" instance=ExtResource("2_yjgi3")]
 position = Vector2(216, 0.1428585)
 _character = "E"
 
+[node name="CollisionShape2D" parent="Wheel/Characters/Character6/Area2D" index="0"]
+shape = SubResource("ConvexPolygonShape2D_v21xv")
+
 [node name="Character7" parent="Wheel/Characters" instance=ExtResource("2_yjgi3")]
 position = Vector2(164.2857, 137.5)
 _character = "F"
+
+[node name="CollisionShape2D" parent="Wheel/Characters/Character7/Area2D" index="0"]
+shape = SubResource("ConvexPolygonShape2D_jrby7")
 
 [node name="Character8" parent="Wheel/Characters" instance=ExtResource("2_yjgi3")]
 position = Vector2(31.285713, 202.57143)
 _character = "G"
 
+[node name="CollisionShape2D" parent="Wheel/Characters/Character8/Area2D" index="0"]
+shape = SubResource("ConvexPolygonShape2D_7ao3m")
+
 [node name="Character9" parent="Wheel/Characters" instance=ExtResource("2_yjgi3")]
 position = Vector2(-96, 200.57143)
 _character = "H"
+
+[node name="CollisionShape2D" parent="Wheel/Characters/Character9/Area2D" index="0"]
+shape = SubResource("ConvexPolygonShape2D_b20q0")
 
 [node name="Character10" parent="Wheel/Characters" instance=ExtResource("2_yjgi3")]
 position = Vector2(-230.85715, 111.85714)
 _character = "I"
 
+[node name="CollisionShape2D" parent="Wheel/Characters/Character10/Area2D" index="0"]
+shape = SubResource("ConvexPolygonShape2D_fj1tt")
+
 [node name="Character11" parent="Wheel/Characters" instance=ExtResource("2_yjgi3")]
 position = Vector2(-290.2857, 0.2857151)
 _character = "J"
+
+[node name="CollisionShape2D" parent="Wheel/Characters/Character11/Area2D" index="0"]
+shape = SubResource("ConvexPolygonShape2D_3c7qe")
 
 [node name="Character12" parent="Wheel/Characters" instance=ExtResource("2_yjgi3")]
 position = Vector2(-272.5714, -125.85714)
 _character = "K"
 
+[node name="CollisionShape2D" parent="Wheel/Characters/Character12/Area2D" index="0"]
+shape = SubResource("ConvexPolygonShape2D_4atxx")
+
 [node name="Character13" parent="Wheel/Characters" instance=ExtResource("2_yjgi3")]
 position = Vector2(-207.42857, -241.85715)
 _character = "L"
 
+[node name="CollisionShape2D" parent="Wheel/Characters/Character13/Area2D" index="0"]
+shape = SubResource("ConvexPolygonShape2D_qe8xw")
+
 [node name="Character14" parent="Wheel/Characters" instance=ExtResource("2_yjgi3")]
 position = Vector2(-93.28571, -310.7143)
 _character = "M"
+
+[node name="CollisionShape2D" parent="Wheel/Characters/Character14/Area2D" index="0"]
+shape = SubResource("ConvexPolygonShape2D_mx5ii")
+
+[editable path="Wheel/Characters/Character"]
+[editable path="Wheel/Characters/Character2"]
+[editable path="Wheel/Characters/Character4"]
+[editable path="Wheel/Characters/Character5"]
+[editable path="Wheel/Characters/Character6"]
+[editable path="Wheel/Characters/Character7"]
+[editable path="Wheel/Characters/Character8"]
+[editable path="Wheel/Characters/Character9"]
+[editable path="Wheel/Characters/Character10"]
+[editable path="Wheel/Characters/Character11"]
+[editable path="Wheel/Characters/Character12"]
+[editable path="Wheel/Characters/Character13"]
+[editable path="Wheel/Characters/Character14"]

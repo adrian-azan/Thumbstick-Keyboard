@@ -1,0 +1,98 @@
+[gd_scene load_steps=3 format=3 uid="uid://bf85xay80u3yx"]
+
+[ext_resource type="Texture2D" uid="uid://bfhj05hleo6uf" path="res://SCENES/icons_xbox_animated_buttons1.png" id="1_5e1hb"]
+[ext_resource type="Texture2D" uid="uid://bvvk2xxm176yd" path="res://ASSETS/Ps4_Xbox_Controller_Buttons_v1.0/Spritesheet/icons_xbox_with_outline_fill.png" id="2_vwq1g"]
+
+[node name="ControllerGuide" type="Node2D"]
+
+[node name="LB" type="Node2D" parent="."]
+
+[node name="LB" type="Sprite2D" parent="LB"]
+position = Vector2(65.00001, 80)
+scale = Vector2(2.035, 2.035)
+texture = ExtResource("2_vwq1g")
+hframes = 10
+vframes = 10
+frame = 25
+
+[node name="Label2" type="Label" parent="LB"]
+offset_left = 86.0
+offset_top = 67.0
+offset_right = 155.0
+offset_bottom = 109.0
+theme_override_font_sizes/font_size = 16
+text = "Symbols"
+
+[node name="RT" type="Node2D" parent="."]
+
+[node name="RT" type="Sprite2D" parent="RT"]
+position = Vector2(214, 122.00001)
+scale = Vector2(2.015, 2.015)
+texture = ExtResource("2_vwq1g")
+hframes = 10
+vframes = 10
+frame = 16
+
+[node name="Label" type="Label" parent="RT"]
+offset_left = 236.0
+offset_top = 106.0
+offset_right = 305.0
+offset_bottom = 155.0
+theme_override_font_sizes/font_size = 16
+text = "Select
+Right"
+
+[node name="LT" type="Node2D" parent="."]
+
+[node name="LT" type="Sprite2D" parent="LT"]
+position = Vector2(65, 122)
+scale = Vector2(2, 2)
+texture = ExtResource("2_vwq1g")
+hframes = 10
+vframes = 10
+frame = 15
+
+[node name="Label" type="Label" parent="LT"]
+offset_left = 86.0
+offset_top = 108.0
+offset_right = 155.0
+offset_bottom = 157.0
+theme_override_font_sizes/font_size = 16
+text = "Select
+Left"
+
+[node name="B" type="Node2D" parent="."]
+position = Vector2(240, 31)
+
+[node name="B" type="Sprite2D" parent="B"]
+scale = Vector2(1.46, 1.46)
+texture = ExtResource("1_5e1hb")
+hframes = 3
+vframes = 4
+frame = 3
+
+[node name="Label" type="Label" parent="B"]
+offset_left = 13.0
+offset_top = -12.0
+offset_right = 82.0
+offset_bottom = 30.0
+theme_override_font_sizes/font_size = 16
+text = "Back"
+
+[node name="Y" type="Node2D" parent="."]
+
+[node name="Y" type="Sprite2D" parent="Y"]
+position = Vector2(220, 9)
+scale = Vector2(1.39, 1.39)
+texture = ExtResource("1_5e1hb")
+hframes = 3
+vframes = 4
+frame = 9
+
+[node name="Label" type="Label" parent="Y"]
+offset_left = 233.0
+offset_top = -3.0
+offset_right = 302.0
+offset_bottom = 39.0
+theme_override_font_sizes/font_size = 16
+text = "Clear"
