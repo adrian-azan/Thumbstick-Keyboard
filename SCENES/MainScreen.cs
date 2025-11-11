@@ -71,6 +71,8 @@ public partial class MainScreen : Node2D
 			RemoveText();
 		if (@event.IsActionPressed("Clear"))
 			ClearText();
+		if (@event.IsActionPressed("Space"))
+			UpdateText("   ");
 		
 		if (@event.IsActionPressed("Right_Alternate"))
 		{

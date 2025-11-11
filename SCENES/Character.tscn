@@ -1,7 +1,7 @@
 [gd_scene load_steps=4 format=3 uid="uid://bn2vbvfuekim1"]
 
 [ext_resource type="Script" uid="uid://caifvua4yvkfo" path="res://SCENES/Character.cs" id="1_3tp35"]
-[ext_resource type="FontFile" uid="uid://dbi72uk4qylh3" path="res://ASSETS/NightPumpkind-nRORO.otf" id="2_3tp35"]
+[ext_resource type="FontFile" uid="uid://cd2m7qo2ngjom" path="res://ASSETS/HolyGolden.otf" id="2_3tp35"]
 
 [sub_resource type="ConvexPolygonShape2D" id="ConvexPolygonShape2D_3tp35"]
 points = PackedVector2Array(-21.595978, -3.215178, 33.705353, 11.963394, 57.70089, -16.831245)
@@ -22,8 +22,8 @@ shape = SubResource("ConvexPolygonShape2D_3tp35")
 [node name="RichTextLabel" type="RichTextLabel" parent="."]
 offset_left = 8.0
 offset_top = 4.0
-offset_right = 108.0
-offset_bottom = 104.0
+offset_right = 101.0
+offset_bottom = 116.0
 theme_override_fonts/normal_font = ExtResource("2_3tp35")
 theme_override_font_sizes/normal_font_size = 80
 text = "A"

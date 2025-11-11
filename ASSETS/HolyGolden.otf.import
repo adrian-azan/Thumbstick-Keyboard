@@ -2,13 +2,13 @@
 
 importer="font_data_dynamic"
 type="FontFile"
-uid="uid://dbi72uk4qylh3"
-path="res://.godot/imported/NightPumpkind-nRORO.otf-9ff86030af6fe71095e4b894357d84f3.fontdata"
+uid="uid://cd2m7qo2ngjom"
+path="res://.godot/imported/HolyGolden.otf-ef6da76daccca93d4af6adf657883ed5.fontdata"
 
 [deps]
 
-source_file="res://ASSETS/NightPumpkind-nRORO.otf"
-dest_files=["res://.godot/imported/NightPumpkind-nRORO.otf-9ff86030af6fe71095e4b894357d84f3.fontdata"]
+source_file="res://ASSETS/HolyGolden.otf"
+dest_files=["res://.godot/imported/HolyGolden.otf-ef6da76daccca93d4af6adf657883ed5.fontdata"]
 
 [params]
 

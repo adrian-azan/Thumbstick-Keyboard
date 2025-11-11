@@ -2,13 +2,13 @@
 
 importer="font_data_dynamic"
 type="FontFile"
-uid="uid://ckdhr45ctdnwb"
-path="res://.godot/imported/NightPumpkind-1GpGv.ttf-8183e6d74176d359e0f5cb998230d278.fontdata"
+uid="uid://ch5aepn7486f6"
+path="res://.godot/imported/HolyGolden-Texture.otf-b8724c1e61f1341143c66eddc6debbb9.fontdata"
 
 [deps]
 
-source_file="res://ASSETS/NightPumpkind-1GpGv.ttf"
-dest_files=["res://.godot/imported/NightPumpkind-1GpGv.ttf-8183e6d74176d359e0f5cb998230d278.fontdata"]
+source_file="res://ASSETS/HolyGolden-Texture.otf"
+dest_files=["res://.godot/imported/HolyGolden-Texture.otf-b8724c1e61f1341143c66eddc6debbb9.fontdata"]
 
 [params]
 

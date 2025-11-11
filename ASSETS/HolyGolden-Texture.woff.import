@@ -2,13 +2,13 @@
 
 importer="font_data_dynamic"
 type="FontFile"
-uid="uid://bl1c557b5medv"
-path="res://.godot/imported/SuperShape-PV9qE.ttf-4c0efa1a254369d4e1e15187eb2348e0.fontdata"
+uid="uid://bhwhvybd0f6ie"
+path="res://.godot/imported/HolyGolden-Texture.woff-4fa867be9b890e4cb296055f1333ea49.fontdata"
 
 [deps]
 
-source_file="res://ASSETS/SuperShape-PV9qE.ttf"
-dest_files=["res://.godot/imported/SuperShape-PV9qE.ttf-4c0efa1a254369d4e1e15187eb2348e0.fontdata"]
+source_file="res://ASSETS/HolyGolden-Texture.woff"
+dest_files=["res://.godot/imported/HolyGolden-Texture.woff-4fa867be9b890e4cb296055f1333ea49.fontdata"]
 
 [params]
 

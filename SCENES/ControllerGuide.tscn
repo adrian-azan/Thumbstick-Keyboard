@@ -23,6 +23,25 @@ offset_bottom = 109.0
 theme_override_font_sizes/font_size = 16
 text = "Symbols"
 
+[node name="RB" type="Node2D" parent="."]
+position = Vector2(148.95, 0)
+
+[node name="RB" type="Sprite2D" parent="RB"]
+position = Vector2(65.00001, 80)
+scale = Vector2(2.035, 2.035)
+texture = ExtResource("2_vwq1g")
+hframes = 10
+vframes = 10
+frame = 26
+
+[node name="Label2" type="Label" parent="RB"]
+offset_left = 86.0
+offset_top = 67.0
+offset_right = 155.0
+offset_bottom = 109.0
+theme_override_font_sizes/font_size = 16
+text = "Space"
+
 [node name="RT" type="Node2D" parent="."]
 
 [node name="RT" type="Sprite2D" parent="RT"]

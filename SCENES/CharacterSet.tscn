@@ -5,7 +5,7 @@
 [ext_resource type="PackedScene" uid="uid://bn2vbvfuekim1" path="res://SCENES/Character.tscn" id="2_yjgi3"]
 
 [sub_resource type="ConvexPolygonShape2D" id="ConvexPolygonShape2D_bpggk"]
-points = PackedVector2Array(8.649552, -1.5410728, 27.455355, 22.510265, -10.491071, 41.98571, -22.544641, 18.715622)
+points = PackedVector2Array(9.096038, 8.220034, 26.060324, 41.702175, -10.602622, 55.039227, -22.544641, 18.715622)
 
 [sub_resource type="ConvexPolygonShape2D" id="ConvexPolygonShape2D_yjgi3"]
 points = PackedVector2Array(-14.508927, -0.25759125, 31.640623, 10.177681, -16.462051, 89.08392)
@@ -53,7 +53,7 @@ texture = ExtResource("2_wvlfc")
 [node name="Characters" type="Node2D" parent="Wheel"]
 
 [node name="Character" parent="Wheel/Characters" instance=ExtResource("2_yjgi3")]
-position = Vector2(-35.142857, -58.85714)
+position = Vector2(-35.143, -87.417)
 _character = "A"
 
 [node name="CollisionShape2D" parent="Wheel/Characters/Character/Area2D" index="0"]

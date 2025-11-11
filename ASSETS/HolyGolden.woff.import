@@ -2,13 +2,13 @@
 
 importer="font_data_dynamic"
 type="FontFile"
-uid="uid://s4xouvtitx7t"
-path="res://.godot/imported/pikmin_by_theadorableoshawott-da33cfr.ttf-72d0c6b47060611d121c72ff8a6efa5b.fontdata"
+uid="uid://cic4yielmvlxu"
+path="res://.godot/imported/HolyGolden.woff-ec3c3be3ac437e858bf6f66ed9ca0b82.fontdata"
 
 [deps]
 
-source_file="res://ASSETS/pikmin_by_theadorableoshawott-da33cfr.ttf"
-dest_files=["res://.godot/imported/pikmin_by_theadorableoshawott-da33cfr.ttf-72d0c6b47060611d121c72ff8a6efa5b.fontdata"]
+source_file="res://ASSETS/HolyGolden.woff"
+dest_files=["res://.godot/imported/HolyGolden.woff-ec3c3be3ac437e858bf6f66ed9ca0b82.fontdata"]
 
 [params]
 
@@ -29,13 +29,8 @@ oversampling=0.0
 Fallbacks=null
 fallbacks=[]
 Compress=null
-compress=false
-preload=[{
-"chars": [],
-"glyphs": [],
-"name": "New Configuration",
-"size": Vector2i(16, 0)
-}]
+compress=true
+preload=[]
 language_support={}
 script_support={}
 opentype_features={}

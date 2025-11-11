@@ -1,11 +1,7 @@
-[gd_scene load_steps=6 format=3 uid="uid://c6b5w32mohlou"]
+[gd_scene load_steps=4 format=3 uid="uid://c6b5w32mohlou"]
 
-[ext_resource type="Shader" uid="uid://wto4eei84af" path="res://SCENES/Selector.gdshader" id="1_g5re1"]
 [ext_resource type="Texture2D" uid="uid://c0ei3cdcu0hhx" path="res://ASSETS/godot-prototype-texture/PNG/logo_512x512/logo_cyan_512x512.png" id="1_gmv5l"]
 [ext_resource type="Script" uid="uid://dqgwji35f8egh" path="res://SCENES/Selector.cs" id="1_sir7q"]
-
-[sub_resource type="ShaderMaterial" id="ShaderMaterial_sir7q"]
-shader = ExtResource("1_g5re1")
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_g5re1"]
 
@@ -13,7 +9,6 @@ shader = ExtResource("1_g5re1")
 script = ExtResource("1_sir7q")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
-material = SubResource("ShaderMaterial_sir7q")
 scale = Vector2(0.375, 0.375)
 texture = ExtResource("1_gmv5l")
 
