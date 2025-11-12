@@ -16,4 +16,14 @@ Keyboard is pretty simple.
 Left bumper will transition the right wheel into a wheel of symbols.
 
 ## Examples
+<img width="1165" height="654" alt="Screenshot from 2025-11-11 19-20-21" src="https://github.com/user-attachments/assets/0d29cba2-af65-419b-a0c8-9479715f7407" />
 
+<img width="1165" height="654" alt="Screenshot from 2025-11-11 19-26-50" src="https://github.com/user-attachments/assets/ea393186-af9d-4ee9-af98-0587309b445b" />
+
+
+## Future
+Analog movement can definetly be improved. It feels like a square and less like a circle. also the distance from the center is kinda inconsistent
+
+Would love to include some other scenes for some varied examples. Like asking for a name, entering an email, filtering a list.
+
+Assets can always look better.
